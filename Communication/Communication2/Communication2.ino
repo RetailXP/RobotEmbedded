@@ -1,21 +1,23 @@
 void setup()
 {
     Serial.begin(9600);
-    Serial.setTimeout(3000);
+    Serial.setTimeout(2000);
+}
+
+void serialFlush()
+{
+    while(Serial.available() > 0)
+    {
+      char t = Serial.read();
+    }
 }
 
 void loop()
 {
-    Serial.println("Message1");
-//    Serial.flush();
-//    delay(1000);
-
-//    while(Serial.available())
-//    {
-        String msg = Serial.readString();
-        Serial.println(msg);
-//        Serial.flush();
-//    }
-
-//    delay(1000);
+    while(!Serial.available());
+    String msg = Serial.readString();
+    if(msg != "")
+      Serial.println("P<A ACK " + msg);
+    serialFlush();
+    delay(2*1000);
 }
