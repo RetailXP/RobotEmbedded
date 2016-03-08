@@ -4,23 +4,9 @@ void setup()
     Serial.setTimeout(2000);
 }
 
-bool a = true;
-
 void loop()
 {
-	String ackMsg = "";
-	
-	while(a)
-	{
-		Serial.println("ackMsg: " + ackMsg);
-
-		ackMsg = Serial.readString();
-
-		if(ackMsg.compareTo("ACK") == 0)
-		{
-			a = false;
-			break;
-		}
-	}
+    String msg = "Message From Arduino!!!\n";
+    Serial.println(msg);
     delay(1000);
 }

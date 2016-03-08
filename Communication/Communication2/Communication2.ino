@@ -6,7 +6,7 @@ void setup()
 
 void serialFlush()
 {
-    while(Serial.available() > 0)
+    while(Serial.available() != 0)
     {
       char t = Serial.read();
     }
@@ -16,8 +16,7 @@ void loop()
 {
     while(!Serial.available());
     String msg = Serial.readString();
-    if(msg != "")
-      Serial.println("P<A ACK " + msg);
+    Serial.println("P<A ACK " + msg);
     serialFlush();
     delay(2*1000);
 }
