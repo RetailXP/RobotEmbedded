@@ -9,7 +9,7 @@ void setup()
 
 void loop()
 {
-    rotateMotor(motor, 1600, 100);
+    rotateMotor(motor, 1600, HIGH, 100);
 
     delay(3000);
 }

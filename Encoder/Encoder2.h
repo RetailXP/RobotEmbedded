@@ -3,6 +3,8 @@
 
 #include <pins_arduino.h>
 
+// per revolusion, the encoder registers 800 ticks
+
 // VCC: Red, GND: Black, A: Green, B: White
 #define encoder2PinA  2
 #define encoder2PinB  23

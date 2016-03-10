@@ -10,7 +10,7 @@
 *   and encoderCount for each encoder, despite some duplication of codes.
 **/
 
-
+// per revolusion, the encoder registers 800 ticks
 
 // VCC: Red, GND: Black, A: Green, B: White
 #define encoder1PinA  3
