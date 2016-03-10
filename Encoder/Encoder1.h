@@ -13,8 +13,8 @@
 
 
 // VCC: Red, GND: Black, A: Green, B: White
-#define encoder1PinA  2
-#define encoder1PinB  3
+#define encoder1PinA  3
+#define encoder1PinB  22
 
 volatile int encoder1Pos = 0;
 

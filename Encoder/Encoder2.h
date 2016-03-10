@@ -4,8 +4,8 @@
 #include <pins_arduino.h>
 
 // VCC: Red, GND: Black, A: Green, B: White
-#define encoder2PinA  18
-#define encoder2PinB  19
+#define encoder2PinA  2
+#define encoder2PinB  23
 
 volatile int encoder2Pos = 0;
 
